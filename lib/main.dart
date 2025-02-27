@@ -48,6 +48,14 @@ class _MyHomePageState extends State<MyHomePage> {
         } catch (e) {
           _result = 'Error';
         }
+      } else if (value == 'x²') {
+        // Handle squaring functionality
+        try {
+          double num = double.parse(_expression);
+          _result = (num * num).toString(); // Square the number
+        } catch (e) {
+          _result = 'Error';
+        }
       } else {
         _expression += value;
       }
@@ -88,6 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 '2',
                 '3',
                 '-',
+                'x²',
                 'C',
                 '0',
                 '=',
